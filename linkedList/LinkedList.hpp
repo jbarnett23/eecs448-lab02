@@ -29,9 +29,6 @@ bool LinkedList<T>::isEmpty() const
 template <typename T>
 int LinkedList<T>::size() const
 {
-	/** TODO
-		Fix this method
-	*/
 	return(m_size);
 }
 
@@ -39,7 +36,15 @@ template <typename T>
 bool LinkedList<T>::search(T value) const
 {
 	Node<T>* temp = m_front;
+	Node<T>* num = nullptr;
 	bool isFound = false;
+
+	if (temp != NULL)
+	{
+		num = temp;
+		temp = temp->getNext();
+		isFound = true;
+	}
 
 	/** TODO
 		Fix this method
